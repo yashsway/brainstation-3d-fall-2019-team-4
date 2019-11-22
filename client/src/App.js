@@ -3,6 +3,7 @@ import "./App.scss";
 import footerLogo from './assets/footer-logo.svg';
 import headerLogo from './assets/nomad-name-only.png';
 import cards from './assets/cards.png';
+import pin from './assets/pin.svg';
 
 import { Helmet } from "react-helmet";
 import Select from "react-select";
@@ -152,7 +153,7 @@ class App extends React.Component {
         <header className="header">
           <img className="header__logo" src={headerLogo} alt="logo" />
           <div className="header__container">
-            <img className="header__icon" src="" />
+            <img className="header__icon" src={pin} />
             <span className="header__country">Turkey</span>
             <span className="header__link">change country</span>
           </div>
