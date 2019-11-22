@@ -1,26 +1,155 @@
 // import the base SCSS mixins, variables etc for use in all your components
 @import './styles/utils/base';
 
+// Import custom fonts:
+
+@font-face {
+  font-family: "Avenir Next LT Pro Regular";
+  src: url("./assets/fonts/avenir-next-lt-pro-regular.otf") format("truetype"),
+       url("./assets/fonts/avenir-next-lt-pro-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro Demi";
+  src: url("./assets/fonts/avenir-next-lt-pro-demi.ttf") format("truetype"),
+       url("./assets/fonts/avenir-next-lt-pro-demi.otf") format("opentype");
+}
+
 // TODO: replace the following styles once you start!
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  font-family: "Avenir Next LT Pro Regular";
 }
 
-.App-logo {
-  height: 40vmin;
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 10vh;
+  padding: 40px 0;
+  &__logo {
+    height: 60px;
+  }
+  &__container {
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+    color: grey;
+  }
+  &__icon {
+
+  }
+  &__country {
+    margin-right: 20px;
+    font-size: 30px;
+  }
+  &__link {
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: underline;
+  }
 }
 
-.App-link {
-  color: #09d3ac;
+.form {
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &--city-container {
+    height: 90vh;
+    background-image: url("./assets/soyoung-han-f1koTznnXe8-unsplash.jpg");
+    background-size: cover;
+  }
+  &--cuisine-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("./assets/buna-sartoria-the-designet-taller-alonso-de-garay-interiors-restaurant-mexico-city_dezeen_2364_col_3.jpg");
+    background-size: cover;
+  }
+  &__label {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+  &--city-label {
+    color: black;
+  }
+  &--cuisine-label {
+    color: white;
+  }
+  &__input {
+    width: 700px;
+    font-size: 40px;
+    margin-bottom: 100px;
+  }
+  &--city-input {
+
+  }
+  &__description {
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+  &--city-description {
+    color: white;
+  }
+  &--cuisine-description {
+    color: white;
+  }
+  &--cuisine-input {
+
+  }
+  &__button {
+    display: inline-block;
+    font-size: 30px;
+    color: grey;
+    padding: 10px 30px;
+  }
+}
+
+.result {
+  display: none;
+  flex-direction: column;
+  // height: 1500px;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  &__image-container {
+    width: 90%;
+    padding-bottom: 40px;
+  }
+  &__header {
+    font-size: 40px;
+    font-weight: bold;
+    color: grey;
+  }
+  &__image {
+    width: 100%;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px;
+  padding: 60px 0;
+  border-top: 1px solid lightgrey;
+  &__logo {
+    width: 350px;
+  }
+  &__email {
+    font-size: 30px;
+    cursor: pointer;
+    color: grey;
+  }
 }
